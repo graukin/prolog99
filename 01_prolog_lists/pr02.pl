@@ -10,3 +10,5 @@ test1 :- pre_last(A,[]), A = [].
 test2 :- pre_last(B,[a]), B = [].
 test3 :- pre_last(C,[a,b]), C = a.
 test4 :- pre_last(D,[a,b,c,d]), D = c.
+
+tests :- test1, test2, test3, test4.
