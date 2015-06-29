@@ -22,6 +22,6 @@ test1 :- pack([a], A), A=[a].
 test2 :- pack([a, a], B), B=[[2, a]].
 test3 :- pack([a, a, b, b], C), C=[[2, a], [2, b]].
 test4 :- pack([a, b, c], D), D=[a, b, c].
-test5 :- pack([a, a, b, b, c, d, d, d, d, c, c], A), A=[[2, a], [2, b], c, [4, d], [2, c]].
+test5 :- pack([a, a, b, b, b, c, d, d, d, d, c, c], A), A=[[2, a], [3, b], c, [4, d], [2, c]].
 
 test :- test1, test2, test3, test4, test5.
