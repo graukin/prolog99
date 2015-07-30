@@ -8,8 +8,8 @@ drop_l([_|T], N, N, T2) :- drop_l(T, N, 1, T2), !.
 drop_l([H|T], N, K, [H|T2]) :- K1 is K+1, drop_l(T, N, K1, T2).
 
 drop([], _, []).
-drop(X, 0, X).
-drop(_, 1, []).
+drop(X, 0, X) :- !.
+drop(_, 1, []) :- !.
 drop(X, N, Y) :- drop_l(X, N, 1, Y).
 
 test1 :- drop([a, b, c, d], 2, A), A=[a, c].
